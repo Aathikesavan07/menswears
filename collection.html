@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-cart</title>
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="preconnect">
+
+    <!--my style-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="one"><span>E</span>-Cart</h1>
+
+        <div class="navbar-link">
+            <P class="para"><a href="index.html">Home</a></P>
+            <P class="para"><a href="collection.html">collection</a></P>
+            <P class="para"><a href="contact.html">contact</a></P>
+
+        </div>
+       <div class="shop-icons">
+        <div class="cart-count">0</div>
+       <i id="cart-icon" class="fa fa-shopping-cart" onclick="show()"> </i>
+       </div>
+
+       <div class="navbar-menu" onclick="showNavbar()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+
+       <div class="cart">
+        <div class="cart-title">Cart Items</div>
+        <div class="cart-content">
+          <!--  <div class="cart-box">
+                <img src="assests/blacky.jpg" class="cart-img">
+                <div class="detail-box">
+                    <div class="cart-product-tittle"> Black Shirt</div>
+                  <div class="price-box">
+                    <div class="cart-price"> Rs.1200</div>
+                    <div class="cart-amt">Rs.1200</div>
+                  </div>
+                  <input type="number" value="1" class="cart-quantity">
+                </div>
+                <div class="cart-remove"><i class="fa fa-trash" aria-hidden="true"></i></div>
+               
+            </div>
+            
+            </div>-->
+
+       </div>
+       <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">Rs.0</div>
+       </div>
+       <button class="btn-buy" onclick="placeOrder()">Place Order</button>
+       <i class="fa fa-times" id="close-icon" aria-hidden="true" onclick="out()"></i>
+       
+</div>
+
+
+       
+    </nav>
+    <!--side navbar-->
+    <div class="side-navbar">
+        <p class="close" style="text-align: right;" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <P class="side-navbar-link"><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a></P>
+            <P class="side-navbar-link"><i class="fa fa-paper-plane" aria-hidden="true"></i><a href="collection.html">collection</a></P>
+            <P class="side-navbar-link"><i class="fa fa-phone" aria-hidden="true"></i><a href="contact.html">contact</a></P>
+        </div>
+      </div>
+
+<!--product-->
+
+<div class="product-section">
+    
+<form class="product-search" >
+<input type="text"id=search placeholder="Search">
+<i class="fa fa-search"></i>
+
+</form>
+
+
+
+<div class="products" id="products">
+    <div class="products-box">
+        <img src="assests/blacky.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Black shirt</p>
+        <span class="product-price">Rs.1200</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/blue.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Blue shirt</p>
+        <span class="product-price">Rs.600</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/white-t.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">White T-shirt</p>
+        <span class="product-price">Rs.700</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/yellow.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Yellow shirt</p>
+        <span class="product-price">Rs.1000</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/gold.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Gold bracelite</p>
+        <span class="product-price">Rs.45000</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+        
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/bracelite.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Silver bracelite</p>
+        <span class="product-price">Rs.5000</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/belt.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Belt</p>
+        <span class="product-price">Rs.300</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/sho.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Sneaker</p>
+        <span class="product-price">Rs.1400</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/watch3.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Watch</p>
+        <span class="product-price">Rs.400</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/jeans-trouser.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Blue Jeans</p>
+        <span class="product-price">Rs.900</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/black-jeans.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Black Jeans</p>
+        <span class="product-price">Rs.1100</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    
+    <div class="products-box">
+        <img src="assests/grey-jeans.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Grey Jeans</p>
+        <span class="product-price">Rs.1000</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/slipper2.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Slipper</p>
+        <span class="product-price">Rs.400</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/perfume2.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Perfume</p>
+        <span class="product-price">Rs.800</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/ring.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Ring</p>
+        <span class="product-price">Rs.250</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/bag2.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Bag</p>
+        <span class="product-price">Rs.1400</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/smart watch.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Smart Watch</p>
+        <span class="product-price">Rs.3500</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/glass.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Sun Glass</p>
+        <span class="product-price">Rs.300</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/track pant.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Track Pant</p>
+        <span class="product-price">Rs.800</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/powder.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Face Powder</p>
+        <span class="product-price">Rs.200</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/face cream.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Face Cream</p>
+        <span class="product-price">Rs.300</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/shoe.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Shoe</p>
+        <span class="product-price">Rs.800</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/towels.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Towel</p>
+        <span class="product-price">Rs.200</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+    <div class="products-box">
+        <img src="assests/beard.jpg" class="prd-img" style="width: 200px; height:200px">
+        <p class="collection-nme">Beard Oil</p>
+        <span class="product-price">Rs.240</span>
+        <button class="collection-btn">Add Cart<i class="fa fa-cart-plus" aria-hidden="true"></i></button>
+
+    </div>
+   
+    
+</div>
+</div>
+
+
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-box-1">
+          <h2 class="heading-text">E-cart</h2>
+          <p>karaikudi Sivagangai district,Tamilnadu India-630001</p>
+        <div class="footer-icon-container">
+            <i class="fa-brands fa-instagram" style="color:white;"></i>
+            <i class="fa-brands fa-twitter" style="color:white;"></i>
+            <i class="fa-brands fa-whatsapp" style="color:white;"></i>
+
+        </div>
+        <p>@2024 Nostra.com</p>
+        </div>
+
+    </div>
+
+</div>
+<script src="main.js"></script>
+<script src="collections.js"></script>
+</body>
+
+
+</html>

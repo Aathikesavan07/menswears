@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-cart</title>
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--my style-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1 class="one"><span>E</span>-Cart</h1>
+
+        <div class="navbar-link">
+            <P class="para"><a href="index.html">Home</a></P>
+            <P class="para"><a href="collection.html">collection</a></P>
+            <P class="para"><a href="contact.html">contact</a></P>
+        </div>
+
+        <div class="navbar-menu" onclick="showNavbar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+    <!--side navbar-->
+    <div class="side-navbar">
+        <p class="close" style="text-align: right;" onclick="closeNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </p>
+
+        <div class="side-navbar-links">
+            <P class="side-navbar-link"><i class="fa fa-home" aria-hidden="true"></i><a href="index.html">Home</a></P>
+            <P class="side-navbar-link"><i class="fa fa-paper-plane" aria-hidden="true"></i><a href="collection.html">collection</a></P>
+            <P class="side-navbar-link"><i class="fa fa-phone" aria-hidden="true"></i><a href="contact.html">contact</a></P>
+        </div>
+
+    </div>
+
+    <!---header-->
+    <div class="header">
+
+        <div>
+            <h1>Level up your style</h1>
+            <p class="ind-para">with our stunning collections</p>
+            <a class="header-button" href="collection.html" >Shop Now</a>
+        </div>
+
+        <div>
+            <img src="assests/all.jpg" alt="fashion image" style="width: 300px; height: 300px;">
+        </div>
+    </div>
+    
+
+    <!--service-->
+    <div class="service">
+        <div class="service-container-1">
+            <div>
+                <h2>We Provide Best</h2>
+                <h2>Customer Experience</h2>
+            </div>
+
+            
+        </div>
+
+        <div class="service-container-2">
+            <div>
+                <i class="fa-regular fa-face-smile"></i>
+                <h4>Satisfaction Guarantee</h4>
+                <p>We have complete confidence in the quality of our products and firmly belive that you will be more than delight with your purchase.</p>
+            </div>
+
+            <div>
+                <i class="fa fa-bolt" aria-hidden="true"></i>
+                <h4>New Arrival Everyday</h4>
+        <p> we are thrilled to announce the arrival of our latest product. Our product range is designed to help you stay connected ,productive and entertained</p>
+            </div>
+
+            <div>
+                <i class="fa fa-truck" aria-hidden="true"></i>
+                <h4>Fast & Free Shipping</h4>
+                <p>We are offering free shipping can be a powerful incentive for customers to make a purchase,reduces the cost of the order</p>
+            </div>
+        </div>
+    </div>
+
+    <!--new arrival-->
+    <h2 style="padding: 20px;" class="tex-shd">New Arrival</h2>
+    <div class="new-arrival">
+        <div class="new-arrival-container">
+            <img src="assests/black-img.jpg" alt="fashion image" style="width:200px; height:200px;">
+           
+        </div>
+        <div class="new-arrival-container">
+            <img src="assests/images.jpg" alt="fashion image" style="width:200px; height:200px;">
+            
+        </div>
+        <div class="new-arrival-container">
+            <img src="assests/bottel.jpg" alt="fashion image" style="width:200px; height:200px;">
+            
+        </div>
+        <div class="new-arrival-container">
+            <img src="assests/bags.jpg" alt="fashion image" style="width:200px; height:200px;">
+           
+        </div>
+    </div>
+
+    <h2 style="padding: 20px;" class="tex-shd">Most Wanted</h2>
+    <div class="new-arrival">
+        <div class="new-arrival-container">
+            <img src="assests/jeans.jpg" alt="fashion image" style="width:200px; height:200px;">
+             
+        </div>
+        <div class="new-arrival-container">
+            <img src="assests/perfume.jpg" alt="fashion image" style="width:200px; height:200px;">
+           
+        </div>
+        <div class="new-arrival-container">
+            <img src="assests/hoodie.jpg" alt="fashion image" style="width:200px; height:200px;">
+          
+        </div>
+        <div class="new-arrival-container">
+            <img src="assests/slipper.jpg" alt="fashion image" style="width:200px; height:200px;">
+            
+        </div>
+    </div>
+
+<!--news letter-->
+
+<div class="news">
+    <h2>Join our News Letter</h2>
+    <p>Signup for our email newsletter to get exclusive discounts updates and more..</p>
+    <div class="searc">
+        
+        <input type="text" placeholder="Search...">
+
+    </div>
+
+    <div>
+        <button class="button-sub" onclick="sub()">Subscribe</button>
+    </div>
+
+</div>
+
+<!--footer-->
+<div class="footer">
+    <div class="footer-container">
+        <div class="footer-box-1">
+          <h2 class="heading-text">E-cart</h2>
+          <p>karaikudi Sivagangai district,Tamilnadu India-630001</p>
+        <div class="footer-icon-container">
+            <i class="fa-brands fa-instagram" style="color:white;"></i>
+            <i class="fa-brands fa-twitter" style="color:white;"></i>
+            <i class="fa-brands fa-whatsapp" style="color:white;"></i>
+
+        </div>
+        <p>@2024 Nostra.com</p>
+        </div>
+
+    </div>
+
+</div>
+<script src="main.js"></script>
+</body>
+
+
+</html>
